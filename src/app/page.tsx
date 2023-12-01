@@ -248,7 +248,7 @@ justifyContent: 'center',
        
         }}
       >
-저장하기
+submit
       </button>
     </div>
 
