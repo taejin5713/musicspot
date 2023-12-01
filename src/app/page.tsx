@@ -248,7 +248,7 @@ justifyContent: 'center',
        
         }}
       >
-        저장하기
+          <span style={{ textAlign: 'center' }}>저장하기</span>
       </button>
     </div>
 
