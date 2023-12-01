@@ -11,8 +11,7 @@ import { getMarkers } from './actions/get-markers';
 const Map = () => {
 // 작동 안함
   const [map, setMap] = useState<google.maps.Map | null>(null);
-  
-
+   
  
   return (
     <LoadScript
@@ -142,6 +141,7 @@ const Map = () => {
         {
           newMarker && (
             <MarkerF
+            icon={'/spot.png'}
               position={{
                 lat: newMarker.lat,
                 lng: newMarker.lng
@@ -157,7 +157,8 @@ const Map = () => {
           markers && (
             <>
               {markers.map((e, i) =>
-                <MarkerF key={i} position={{
+                <MarkerF 
+                icon={'/spot.png'}   key={i} position={{
                   lat: e.lat,
                   lng: e.lng
                 }}
@@ -205,7 +206,11 @@ const Map = () => {
          
         }}
       />
-      <input  style={{
+   
+      <input 
+      
+      
+      style={{
 
 
           
@@ -221,13 +226,15 @@ textAlign: 'center',
 justifyContent: 'center',
 
 }}
+       placeholder="Paste Spotify share link"
         type="url"
         name="link"
         className=" rounded-xl outline-none"
         id="urlInput"
       
       />
-    
+   
+
       <button
         type="submit"
         id="saveButton"
@@ -250,6 +257,7 @@ justifyContent: 'center',
       >
       submit
       </button>
+      
     </div>
 
     </form>
