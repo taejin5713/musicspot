@@ -234,6 +234,10 @@ justifyContent: 'center',
         className='font-bold'
         onClick={submitForm}
         style={{
+          display: 'flex',
+          justifyContent: 'center', // Center horizontally
+          alignItems: 'center', // Center vertically
+          margin: '0 auto', // Center horizontally using margin
           opacity: inputVisible ? 1 : 0,
           width: inputVisible ? '150px' : '0',
           padding: '10px 15px',
