@@ -191,32 +191,7 @@ const Map = () => {
       </GoogleMap>
       
 
-      <div className='container'>
-      <input 
-        type="url"
-        name="link"
-        className="ring rounded-xl outline-none"
-        id="urlInput"
-        style={{
-
-
-          
-          opacity: inputVisible ? 1 : 0,
-          width: inputVisible ? '150px' : '0',
-          padding: '10px',
-          border: '1px solid #ccc',
-          borderRadius: '8px 0 0 8px',
-          outline: 'none',
-          transition: 'opacity 0.5s, width 0.5s',
-          display: 'flex',
-          flexDirection: 'column',// 작동 안함
-          alignItems: 'center',
-          textAlign: 'center',
-          justifyContent: 'center',
-          
-        }}
-      />
-      <img
+      <div className='container flex mt-2'>  <img
         src="https://w7.pngwing.com/pngs/68/239/png-transparent-number-computer-icons-plus-miscellaneous-game-plus.png"
         alt="plus icon"
         className="icon"
@@ -230,9 +205,33 @@ const Map = () => {
          
         }}
       />
+      <input  style={{
+
+
+          
+opacity: inputVisible ? 1 : 0,
+width: inputVisible ? '300px' : '0', 
+border: '1px solid #ccc',
+borderRadius: '8px 0 0 8px',
+outline: 'none',
+transition: 'opacity 0.5s, width 0.5s',
+display: 'flex', 
+alignItems: 'center',
+textAlign: 'center',
+justifyContent: 'center',
+
+}}
+        type="url"
+        name="link"
+        className=" rounded-xl outline-none"
+        id="urlInput"
+      
+      />
+    
       <button
         type="submit"
         id="saveButton"
+        className='font-bold'
         onClick={submitForm}
         style={{
           opacity: inputVisible ? 1 : 0,
@@ -241,7 +240,8 @@ const Map = () => {
           backgroundColor: '#4CAF50',
           color: 'white',
           border: '1px solid #4CAF50',
-          borderRadius: '8px', // Adjusted to have rounded corners
+          borderTopRightRadius: '8px',
+          borderBottomRightRadius:'8px',
           cursor: 'pointer',
           outline: 'none',
           transition: 'opacity 0.5s, width 0.5s',
